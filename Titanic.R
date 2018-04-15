@@ -6,7 +6,7 @@ df <- as.data.frame(Titanic)
 # check structure of data frame
 str(df)
 
-# 2 - Use ggplot() for the first instruction
+# 2 - Use ggplot() 
 p0 <- ggplot(df, aes(x = Class, fill = Sex)) +
   geom_bar(position = "dodge")
 
