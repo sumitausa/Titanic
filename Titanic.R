@@ -1,16 +1,16 @@
 library(ggplot2)
-# titanic is avaliable in your workspace
-# 1 - Check the structure of titanic
-#library(titanic)
 
 data("Titanic")
 df <- as.data.frame(Titanic)
 
+# check structure of data frame
 str(df)
 
 # 2 - Use ggplot() for the first instruction
-ggplot(df, aes(x = Class, fill = Sex)) +
+p0 <- ggplot(df, aes(x = Class, fill = Sex)) +
   geom_bar(position = "dodge")
+
+print(p0)
 
 # 3 - Plot 2, add facet_grid() layer
 p <- ggplot(df, aes(x = Class, fill = Sex)) +
